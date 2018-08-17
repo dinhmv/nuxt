@@ -1,3 +1,10 @@
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/nuxt/'
+  }
+} : {}
+
 module.exports = {
   /*
   ** Headers of the page
@@ -55,9 +62,6 @@ module.exports = {
     //baseURL: 'https://public-api.wordpress.com/wp/v2/sites/diepbeauty.wordpress.com/',
     baseURL: 'https://public-api.wordpress.com/wp/v2/sites/nhipvang.com/',
     https: true,
-  },
-  router: {
-    base: '/nuxt/'
   },
 }
 
