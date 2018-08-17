@@ -63,5 +63,6 @@ module.exports = {
     baseURL: 'https://public-api.wordpress.com/wp/v2/sites/nhipvang.com/',
     https: true,
   },
+  ...routerBase,
 }
 
